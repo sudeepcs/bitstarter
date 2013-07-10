@@ -2,8 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buffer = fs.readFileSync("index.html")
-var text = buffer.toString()
+var buffer = fs.readFileSync("index.html");
+var text = buffer.toString();
 
 app.get('/', function(request, response) {
   response.send(text);
